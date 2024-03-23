@@ -16,8 +16,8 @@ def capture_voice_input():
 
 def convert_voice_to_text(audio):
     try:
-        #text = recognizer.recognize_google(audio, language ='fa-IR')
-        text = recognizer.recognize_google(audio)
+        text = recognizer.recognize_google(audio, language ='fa-IR')
+        #text = recognizer.recognize_google(audio)
         print("You said: " + text)
     except sr.UnknownValueError:
         text = ""
@@ -32,13 +32,14 @@ def convert_voice_to_text(audio):
 
 def process_voice_command(text):
     
-    if 'open youtube' in text.lower():
+    if 'یوتیوب رو باز کن' in text.lower():
         speak = pyttsx3.init()
         voices = speak.getProperty('voices')
-        speak.setProperty('voice', voices[1].id)
-        speak.say("Here you go to Youtube\n")
+        speak.setProperty('voice', voices[2].id)
+        speak.setProperty('rate', 150)
+        speak.say("                Yes my lord! , Here you go to Youtube\n")
         speak.runAndWait()
-        #webbrowser.open("youtube.com")
+        webbrowser.open("youtube.com")
     if "hello" in text.lower():
         print("Hello! How can I help you?")
     elif "goodbye" in text.lower():
