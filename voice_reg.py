@@ -40,7 +40,9 @@ def process_voice_command(text):
         speak.say("                Yes my lord! , Here you go to Youtube\n")
         speak.runAndWait()
         webbrowser.open("youtube.com")
-    if "hello" in text.lower():
+    elif 'سلام کاوایی' in text.lower():
+        speak.say("         Hello My Lord! , Have a Good Day")
+    elif "hello" in text.lower():
         print("Hello! How can I help you?")
     elif "goodbye" in text.lower():
         print("Goodbye! Have a great day!")
