@@ -1,7 +1,7 @@
 import speech_recognition as sr 
 import pyttsx3
 import webbrowser
-print(webbrowser._browsers) 
+
 
 
 recognizer = sr.Recognizer()
@@ -16,7 +16,8 @@ def capture_voice_input():
 
 def convert_voice_to_text(audio):
     try:
-        text = recognizer.recognize_google(audio, language ='fa-IR')
+        #text = recognizer.recognize_google(audio, language ='fa-IR')
+        text = recognizer.recognize_google(audio)
         print("You said: " + text)
     except sr.UnknownValueError:
         text = ""
@@ -30,6 +31,14 @@ def convert_voice_to_text(audio):
 
 
 def process_voice_command(text):
+    
+    if 'open youtube' in text.lower():
+        speak = pyttsx3.init()
+        voices = speak.getProperty('voices')
+        speak.setProperty('voice', voices[1].id)
+        speak.say("Here you go to Youtube\n")
+        speak.runAndWait()
+        #webbrowser.open("youtube.com")
     if "hello" in text.lower():
         print("Hello! How can I help you?")
     elif "goodbye" in text.lower():
@@ -38,6 +47,7 @@ def process_voice_command(text):
     else:
         print("I didn't understand that command. Please try again.")
     return False
+    
 
 
 def main():
@@ -47,12 +57,7 @@ def main():
         text = convert_voice_to_text(audio)
         end_program = process_voice_command(text)
 
-        query = capture_voice_input().lower()
-        if 'open youtube' in query:
-            engine = pyttsx3.init()
-            engine.say("Here you go to Youtube\n")
-            engine.runAndWait()
-            webbrowser.open("youtube.com")
+        
 
 
 
