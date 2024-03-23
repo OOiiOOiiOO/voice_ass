@@ -1,0 +1,4 @@
+1-  conda => issuse : python 3.12 not working ________ install python 3.8
+2- conda intall speachrecognition VIA conda install pyaudio
+3_ install pyttsx3  =>  issuse : go to github page for install espeak for linux distro
+
