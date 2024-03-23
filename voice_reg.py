@@ -1,12 +1,3 @@
-import pyttsx3
-pyttsx3.speak("I will speak this text")
-
-
-
-
-
-
-
 #import speech_recognition as sr 
 #
 #recognizer = sr.Recognizer()
@@ -55,4 +46,11 @@ pyttsx3.speak("I will speak this text")
 #if __name__ == "__main__":
 #    main()
 #
+
+import pyttsx3
+engine = pyttsx3.init()
+engine.say("I will speak this text")
+engine.runAndWait()
+
+
 
