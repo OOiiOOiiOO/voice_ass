@@ -50,13 +50,13 @@ def process_voice_command(text):
         speak.say("         Hello My Lord! , Have a Good Day, How can I help you?")
         speak.runAndWait()
 
-    elif 'انیمه شیطان کش کی پخش میشه' in text.lower():
+    elif 'محمد رضا یحیایی' in text.lower():
         speak = pyttsx3.init()
         voices = speak.getProperty('voices')
         speak.setProperty('voice', voices[2].id)
         speak.setProperty('rate', 150)
-        speak.say("         Hello My Lord! , I Search for you about this Anime.        ha  ha ha ha  ha ha")
-        webbrowser.open("https://www.google.com/search?q=when+demon+slayer+season+5+release&sca_esv=100a8d72724cfbcd&sxsrf=ACQVn0-KcEtinDHb88paSkCDYfk_VZeEpA%3A1711203613978&source=hp&ei=HeX-ZdbLOfK_xc8P4viMyAg&iflsig=ANes7DEAAAAAZf7zLcJx0S-czAdF0DUXjCWAaCv8WECp&oq=when+demon+slayer+season+5+re&gs_lp=Egdnd3Mtd2l6Ih13aGVuIGRlbW9uIHNsYXllciBzZWFzb24gNSByZSoCCAAyBRAAGIAEMgUQABiABDIFEAAYgAQyBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHkjr3gJQ9AlY19ACcAt4AJABApgBtRagAdyuAaoBEjAuMTYuMy4yLjYtMi4zLjIuNLgBA8gBAPgBAZgCKKACq4ABqAIKwgIHECMY6gIYJ8ICChAjGIAEGIoFGCfCAgQQIxgnwgILEC4YgAQYxwEY0QPCAgUQLhiABMICBxAAGIAEGArCAgcQLhgKGIAEwgIHEC4YgAQYCsICBRAhGKABwgIHEAAYgAQYDcICCxAAGIAEGIoFGIYDmANIkgcRMTEuMTEuOC4yLjYtMi41LjGgB6-SAg&sclient=gws-wiz")
+        speak.say("         Hello My Lord! , I think this person is ..... .        ha  ha ha ha  ha ha")
+        webbrowser.open("https://www.google.com/search?q=%D8%A7%D8%AF%D9%85+%D9%86%D8%A7%D8%AF%D8%A7%D9%86&tbm=isch&ved=2ahUKEwjxy4Hf842FAxUwkP0HHcf1ANMQ2-cCegQIABAA&oq=%D8%A7%D8%AF%D9%85+%D9%86%D8%A7%D8%AF%D8%A7%D9%86&gs_lp=EgNpbWciEdin2K_ZhSDZhtin2K_Yp9mGSPEVUM8HWMoUcAB4AJABAJgBAKABAKoBALgBA8gBAPgBAYoCC2d3cy13aXotaW1niAYB&sclient=img&ei=TqMAZvHsLbCg9u8Px-uDmA0&bih=967&biw=1905&hl=en#imgrc=cz97Lx6JdPtjYM")
         speak.runAndWait()
         
     elif 'آهنگ' in text.lower():
