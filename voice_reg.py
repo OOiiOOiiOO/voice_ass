@@ -58,7 +58,16 @@ def process_voice_command(text):
         speak.say("         Hello My Lord! , I think this person is ..... .        ha  ha ha ha  ha ha")
         webbrowser.open("https://www.google.com/search?q=%D8%A7%D8%AF%D9%85+%D9%86%D8%A7%D8%AF%D8%A7%D9%86&tbm=isch&ved=2ahUKEwjxy4Hf842FAxUwkP0HHcf1ANMQ2-cCegQIABAA&oq=%D8%A7%D8%AF%D9%85+%D9%86%D8%A7%D8%AF%D8%A7%D9%86&gs_lp=EgNpbWciEdin2K_ZhSDZhtin2K_Yp9mGSPEVUM8HWMoUcAB4AJABAJgBAKABAKoBALgBA8gBAPgBAYoCC2d3cy13aXotaW1niAYB&sclient=img&ei=TqMAZvHsLbCg9u8Px-uDmA0&bih=967&biw=1905&hl=en#imgrc=cz97Lx6JdPtjYM")
         speak.runAndWait()
-        
+
+    elif 'نظرت راجع به داوود چیه' in text.lower():
+        speak = pyttsx3.init()
+        voices = speak.getProperty('voices')
+        speak.setProperty('voice', voices[2].id)
+        speak.setProperty('rate', 150)
+        speak.say("         Hello My Lord! , I think this person is ..... .        ha  ha ha ha  ha ha")
+        webbrowser.open("https://ih1.redbubble.net/image.5013594037.8598/flat,750x,075,f-pad,750x1000,f8f8f8.jpg")
+        speak.runAndWait()
+
     elif 'آهنگ' in text.lower():
         speak = pyttsx3.init()
         voices = speak.getProperty('voices')
