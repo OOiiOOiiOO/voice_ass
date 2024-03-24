@@ -50,7 +50,7 @@ def process_voice_command(text):
         speak.say("         Hello My Lord! , Have a Good Day, How can I help you?")
         speak.runAndWait()
 
-    elif 'محمد رضا یحیایی' in text.lower():
+    elif 'نظرت راجع به محمدرضا چیه' in text.lower():
         speak = pyttsx3.init()
         voices = speak.getProperty('voices')
         speak.setProperty('voice', voices[2].id)
