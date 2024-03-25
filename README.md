@@ -1,4 +1,4 @@
-# voice_ass
+# Simple voice assistant
 
 
 ## This project is a simple voice assistant with Python.
