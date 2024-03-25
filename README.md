@@ -1,10 +1,6 @@
 # Simple voice assistant
 
 
-## This project is a simple voice assistant with Python.
-
-
-
 
 In the future, we plan to add features such as smart home control such as Amazon Alexa, etc.
 
