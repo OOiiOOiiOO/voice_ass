@@ -104,6 +104,25 @@ def process_voice_command(text):
         os.system("firefox")
         speak.runAndWait()
 
+    elif 'تلگرام رو باز کن' in text.lower():
+        speak = pyttsx3.init()
+        voices = speak.getProperty('voices')
+        speak.setProperty('voice', voices[2].id)
+        speak.setProperty('rate', 150)
+        speak.say("         yes My Lord! , I will open the telegram for you.")
+        os.system("telegram-desktop")
+        speak.runAndWait()
+
+    elif 'ترمینال رو باز کن' in text.lower():
+        speak = pyttsx3.init()
+        voices = speak.getProperty('voices')
+        speak.setProperty('voice', voices[2].id)
+        speak.setProperty('rate', 150)
+        speak.say("         yes My Lord! , I will open the terminal for you.")
+        os.system("konsole")
+        speak.runAndWait()
+
+
     elif 'ریبوت کن' in text.lower():
         speak = pyttsx3.init()
         voices = speak.getProperty('voices')
@@ -123,8 +142,7 @@ def process_voice_command(text):
         speak.runAndWait()
 
         
-    elif "hello" in text.lower():
-        print("Hello! How can I help you?")
+    
     elif "فعلا" in text.lower():
         print("Goodbye! Have a great day!")
         return True
