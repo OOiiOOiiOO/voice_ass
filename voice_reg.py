@@ -1,5 +1,6 @@
 import speech_recognition as sr 
 import pyttsx3
+import os
 import webbrowser
 from pydub import AudioSegment
 from pydub.playback import play
@@ -85,10 +86,28 @@ def process_voice_command(text):
         webbrowser.open("https://www.google.com/search?q=%D8%A7%D8%A8+%D9%87%D9%88%D8%A7%DB%8C+%D9%86%D9%88%D8%B4%D9%87%D8%B1&sca_esv=aab80bd44fbfc9fb&sxsrf=ACQVn0-oiMEYf1P2fvBbQEwz26puR2ugJw%3A1711349643752&ei=ix8BZsy8LeSDxc8PnISV6Ak&ved=0ahUKEwiMruic6o6FAxXkQfEDHRxCBZ0Q4dUDCBA&uact=5&oq=%D8%A7%D8%A8+%D9%87%D9%88%D8%A7%DB%8C+%D9%86%D9%88%D8%B4%D9%87%D8%B1&gs_lp=Egxnd3Mtd2l6LXNlcnAiGNin2Kgg2YfZiNin24wg2YbZiNi02YfYsTIEEAAYRzIEEAAYRzIEEAAYRzIEEAAYRzIEEAAYRzIEEAAYRzIEEAAYRzIEEAAYR0ihHFDKCliWG3AAeASQAQCYAQCgAQCqAQC4AQPIAQD4AQGYAgOgAo0BmAMAiAYBkAYIkgcBM6AHAA&sclient=gws-wiz-serp")
         speak.runAndWait()
 
+    elif 'بریو' in text.lower():
+        speak = pyttsx3.init()
+        voices = speak.getProperty('voices')
+        speak.setProperty('voice', voices[2].id)
+        speak.setProperty('rate', 150)
+        speak.say("         yes My Lord! , I will open the browser for you.")
+        os.system("brave")
+        speak.runAndWait()
+
+    elif 'فایرفاکس' in text.lower():
+        speak = pyttsx3.init()
+        voices = speak.getProperty('voices')
+        speak.setProperty('voice', voices[2].id)
+        speak.setProperty('rate', 150)
+        speak.say("         yes My Lord! , I will open the browser for you.")
+        os.system("firefox")
+        speak.runAndWait()
+
         
     elif "hello" in text.lower():
         print("Hello! How can I help you?")
-    elif "خداحافظ" in text.lower():
+    elif "فعلا" in text.lower():
         print("Goodbye! Have a great day!")
         return True
     else:
