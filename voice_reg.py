@@ -104,6 +104,24 @@ def process_voice_command(text):
         os.system("firefox")
         speak.runAndWait()
 
+    elif 'ریبوت کن' in text.lower():
+        speak = pyttsx3.init()
+        voices = speak.getProperty('voices')
+        speak.setProperty('voice', voices[2].id)
+        speak.setProperty('rate', 150)
+        speak.say("         yes My Lord! , I will reboot your PC.")
+        os.system("reboot")
+        speak.runAndWait()
+
+    elif 'خاموش کن' in text.lower():
+        speak = pyttsx3.init()
+        voices = speak.getProperty('voices')
+        speak.setProperty('voice', voices[2].id)
+        speak.setProperty('rate', 150)
+        speak.say("         yes My Lord! , I will reboot your PC.")
+        os.system("'shutdown -P now")
+        speak.runAndWait()
+
         
     elif "hello" in text.lower():
         print("Hello! How can I help you?")
