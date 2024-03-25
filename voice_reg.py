@@ -140,7 +140,14 @@ def process_voice_command(text):
         speak.setProperty('rate', 150)
         speak.say("         yes My Lord! , I will shutdown your PC.")
         time.sleep(5)
-        os.system("'shutdown -P now")
+        if os.name == 'nt':
+        # For Windows operating system
+            os.system('shutdown /s /t 0')
+        elif os.name == 'posix':
+        # For Unix/Linux/Mac operating systems
+            os.system('sudo shutdown now')
+        else:
+            print('Unsupported operating system.')
         speak.runAndWait()
 
         
