@@ -1,6 +1,7 @@
 import speech_recognition as sr 
 import pyttsx3
 import os
+import  time
 import webbrowser
 from pydub import AudioSegment
 from pydub.playback import play
@@ -122,13 +123,13 @@ def process_voice_command(text):
         os.system("konsole")
         speak.runAndWait()
 
-
     elif 'ریبوت کن' in text.lower():
         speak = pyttsx3.init()
         voices = speak.getProperty('voices')
         speak.setProperty('voice', voices[2].id)
         speak.setProperty('rate', 150)
         speak.say("         yes My Lord! , I will reboot your PC.")
+        time.sleep(5)
         os.system("reboot")
         speak.runAndWait()
 
@@ -137,7 +138,8 @@ def process_voice_command(text):
         voices = speak.getProperty('voices')
         speak.setProperty('voice', voices[2].id)
         speak.setProperty('rate', 150)
-        speak.say("         yes My Lord! , I will reboot your PC.")
+        speak.say("         yes My Lord! , I will shutdown your PC.")
+        time.sleep(5)
         os.system("'shutdown -P now")
         speak.runAndWait()
 
