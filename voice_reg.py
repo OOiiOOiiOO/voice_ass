@@ -14,11 +14,10 @@ def capture_voice_input():
     return audio
 
 
-
 def convert_voice_to_text(audio):
     try:
         text = recognizer.recognize_google(audio, language ='fa-IR')
-        #text = recognizer.recognize_google(audio)
+        #text = recognizer.recognize_google(audio)          #for English Command
         print("You said: " + text)
     except sr.UnknownValueError:
         text = ""
@@ -30,7 +29,7 @@ def convert_voice_to_text(audio):
 
 
 
-
+# Main commands
 def process_voice_command(text):
     
     if 'یوتیوب رو باز کن' in text.lower():
